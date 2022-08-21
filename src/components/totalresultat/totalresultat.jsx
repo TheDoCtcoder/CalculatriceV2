@@ -1,10 +1,10 @@
 import style from './totalresultat.module.css'
 
 
-const TotalResultat = ({donnee}) => {
+const TotalResultat = ({donnee2}) => {
     let total =0;
-     {donnee.map((test) => (
-            total = total + test.somme
+     {donnee2.map((test) => (
+            total = total + test.rslt
           ))}
 
         const affichetotal = total ===0 ? <p></p> : <p>{total}</p>

@@ -13,9 +13,12 @@ const ajouterResultat = (nouveauResultat) => {
 
     const nouveauRslt = {      
         id: nextResultatId.current,
-        somme : nouveauResultat
+        ...nouveauResultat
+        
+        
 
     };
+    console.log(nouveauRslt)
 
     nextResultatId.current++;
 
@@ -29,7 +32,7 @@ console.log('tableau :',tableauResultat)
         <>
         <Calculatrice onNouveauResultat={ajouterResultat}/>
         <ListeSomme donnee={tableauResultat}/>
-        <TotalResultat donnee={tableauResultat}/>
+        <TotalResultat donnee2={tableauResultat}/>
         </>
      
     )
